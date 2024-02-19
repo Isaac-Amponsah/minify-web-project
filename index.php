@@ -111,35 +111,15 @@ function minifyDirectory($sourceDir, $outputDir) {
   }
 }
 
-// function minifyDirectory($sourceDir, $outputDir) {
 
-//   if(!is_dir($sourceDir)) throw new Exception('Source directory does not exist.');
-
-//   if(strpos($outputDir, $sourceDir) === 0) throw new Exception('Output directory must not be nested in the source directory.');
-
-//   if($outputDir === $sourceDir) throw new Exception('Output directory and source directory must not be the same.');
-
-
-//   $files = new RecursiveIteratorIterator(
-//     new RecursiveDirectoryIterator($sourceDir, FilesystemIterator::SKIP_DOTS),
-//     RecursiveIteratorIterator::SELF_FIRST
-//   );
-
-
-//   foreach ($files as $file) {
-
-//     if ($file->isFile()) var_dump($file);
-//     if ($file->isDir()) var_dump($file);
-
-//   }
-// }
-
-
-
+/**
+ * @TODO
+ * Construct it as a web page that the leader needs select the directory and and the file types to minify
+ */
 
 // Example usage
-$sourceDir = "C:\wamp64\www\uncleebo\adminpanel";
-$outputDir = 'C:\wamp64\www\panel.min';
+$sourceDir = "C:\wamp64\www\uncleebo";
+$outputDir = 'C:\wamp64\www\uncle.min';
 
 if (!file_exists($outputDir)) {
     mkdir($outputDir, 0777, true);
