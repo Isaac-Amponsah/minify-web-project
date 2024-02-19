@@ -147,4 +147,3 @@ if (!file_exists($outputDir)) {
 
 minifyDirectory($sourceDir, $outputDir);
 echo 'Minification completed.';
-?>
